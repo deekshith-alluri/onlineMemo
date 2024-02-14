@@ -1,4 +1,5 @@
-let url = "";
+// version-1 end-pointURL ="https://script.google.com/macros/s/AKfycbzrs88BjJCWpKwaFYptpifh414Dp1Yu0P2uBsKXANkLhy3g_-TU17c4WCoQSAbVbJoWmA/exec"
+let url = "https://script.google.com/macros/s/AKfycbzrs88BjJCWpKwaFYptpifh414Dp1Yu0P2uBsKXANkLhy3g_-TU17c4WCoQSAbVbJoWmA/exec";
 let file = document.querySelector("#image");
 let img = document.querySelector("#ImageFile");
 file.addEventListener('submit', ()=>{
