@@ -1,7 +1,7 @@
 let url = "";
 let file = document.querySelector("#image");
 let img = document.querySelector("#ImageFile");
-file.addEventListener('chmage', ()=>{
+file.addEventListener('submit', ()=>{
     let fr = new FileReader();
     fr.addEventListener('loadend', ()=>{
         let res = fr.result;
