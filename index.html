@@ -7,15 +7,24 @@
 </head>
 <body>
     <h1 id="msg"></h1>
-    <form action="" method="post" id="form1">
-        <br><input type="number" name="id" placeholder="ID NUMBER.." id="" required>
-        <br><input type="text" name="name" placeholder="NAME PLEASE.." id="" required>
-        <br><input type="text" name="fname" placeholder="FATHER's NAME" id="" required>
-        <br><input type="email" name="email" placeholder="EMAIL PLEASE.." id="" required>
-        <br><input type="tel" name="phone" placeholder="PHONE NUMBER.." id="" required>
-        <br><input type="number" name="score" placeholder="SCORE" id="" required>
+    <form id="form1" action="https://script.google.com/macros/s/AKfycbwuNJ9dKSl7wZgDSVby0R1PpTHAY8lgnxrKJb3UpnJ8LJtWd_idQQNHH9PeQzh-O3FOnA/exec" method="post">
+        <br>ID NUMBER..: <input type="number" name="id" placeholder="ID NUMBER.." id="" required><br>
+        <br>NAME: <input type="text" name="name" placeholder="NAME PLEASE.." id="" required><br>
+        <br>FATHER NAME:<input type="text" name="fname" placeholder="FATHER's NAME" id="" required><br>
+        <br>EMAIL:<input type="email" name="email" placeholder="EMAIL PLEASE.." id="" required><br>
+        <br>PHONE:<input type="tel" name="phone" placeholder="PHONE NUMBER.." id="" required><br>
+        <br>SCORE:<input type="number" name="score" placeholder="SCORE" id="" required><br>
         <br><input type="submit" value="SUBMIT" id="sub">
     </form>
+    <div>
+        would you like to post an image of the very person for more details:
+        <form id="formImg" action="" method="post">
+            <fieldset>
+                <input type="file" name="image" id="image" accept="image/*">
+                <img src="" alt="" id="ImageFile">
+            </fieldset>
+        </form>
+    </div>
     
 </body>
 </html>
