@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>details Entry</title>
+</head>
+<body>
+
+    <h1 id="msg"></h1>
+    <fieldset>
+        <input type="file" name="image" id="image" accept="image/*">
+        <img src="" alt="" id="ImageFile">
+        <!-- <input type="submit" value="SUBMIT"> -->
+    </fieldset>
+    <form id="form1" action="https://script.google.com/macros/s/AKfycbwuNJ9dKSl7wZgDSVby0R1PpTHAY8lgnxrKJb3UpnJ8LJtWd_idQQNHH9PeQzh-O3FOnA/exec" method="post">
+        <br>ID NUMBER..: <input type="number" name="id" placeholder="ID NUMBER.." id="" required><br>
+        <br>NAME: <input type="text" name="name" placeholder="NAME PLEASE.." id="" required><br>
+        <br>FATHER NAME:<input type="text" name="fname" placeholder="FATHER's NAME" id="" required><br>
+        <br>EMAIL:<input type="email" name="email" placeholder="EMAIL PLEASE.." id="" required><br>
+        <br>PHONE:<input type="tel" name="phone" placeholder="PHONE NUMBER.." id="" required><br>
+        <br>SCORE:<input type="number" name="score" placeholder="SCORE" id="" required><br>
+        <br><input type="submit" value="SUBMIT" id="sub">
+    </form>
+
+
+    <script src="imagToDB.js"></script>
+    <script>
+        let form = document.querySelector("#form1");
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault();
+            setTimeout(()=>{
+            let sub = document.querySelector("#sub");
+            sub.value = "SUBMITTED..."
+        }, 3000)
+        })
+    </script>
+
+
+
+    <script id="__bs_script__">//<![CDATA[
+        (function() {
+          try {
+            var script = document.createElement('script');
+            if ('async') {
+              script.async = true;
+            }
+            script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=3.0.2'.replace("HOST", location.hostname);
+            if (document.body) {
+              document.body.appendChild(script);
+            } else if (document.head) {
+              document.head.appendChild(script);
+            }
+          } catch (e) {
+            console.error("Browsersync: could not append script tag", e);
+          }
+        })()
+      //]]></script>
+</body>
+</html>
