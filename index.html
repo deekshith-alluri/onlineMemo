@@ -5,21 +5,87 @@
     <meta name="AUTHOR" content="DeekshithAlluri">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project BSc Life Science</title>
+    <!-- <link rel="stylesheet"  media="(max-width: 600px)" type="text/css" href="mobile-index.css"> -->
+    <link rel="stylesheet" type="text/css" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // $(function(){
+        //     $("#menu-bar-img").click(function(){
+        //         $(".disp-on-click").toggle('slow');
+        //     });
+        // })
+
+        $(document).ready(function(){
+            $('#menu-bar-img').on('click', function(){
+                $('body').toggleClass('active');
+            });
+
+            function reLoad(){
+                setTimeout(()=>{
+                    $("#slide1").slideUp("slow");
+                    setTimeout(()=>{
+                        $("#slide2").slideUp("slow");
+                        setTimeout(()=>{
+                            $("#slide3").slideUp("slow");
+                            setTimeout(()=>{
+                                $("#slide4").slideUp("slow");
+                            },2000);
+                        },2000);
+                    },2000);
+                },2000);
+            }
+            reLoad();
+        });
+    </script>
 </head>
 <body>
-    <div class="title-header">
-        <div class="coll-logo"></div>
-        <div class="coll-title"></div>
+    <div class="coll-title">
+        <div class="coll-img"><a href="index.html"><img src="tara-logo.jpeg" alt="tara-college-Logo"></a></div>
+        <div class="coll-name">
+            <h1>TARA GOVT COLLEGE</h1>
+            <h3>(AUTONOMOUS || NAAC A+ ACCREDITED), SANGAREDDY</h3>
+        </div>
+        <div class="coll-name-mob">
+            <h1>TARA COLLEGE</h1>
+            <h4>(AUTONOMOUS; NAAC A+) SANGAREDDY</h4>
+        </div>
     </div>
-    <div class="slider">
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
+    <div class="nav">
+        <div class="nav-computer">
+            <ol>
+                <li>Home</li>
+                <li>About</li>
+                <li>Courses</li>
+                <li>Teachers</li>
+                <li>Contact Us</li>
+            </ol>
+        </div>
+        <div class="nav-mobile">
+            <img src="menuBar-mobiles.png" alt="Menu" id="menu-bar-img">
+        </div>
+        <div class="disp-on-click">
+            <ol>
+                <li>Home</li>
+                <li>About</li>
+                <li>Courses</li>
+                <li>Teachers</li>
+                <li>Contact Us</li>
+            </ol>
+        </div>
     </div>
-    
-    <div class="dummy-link">
-        enter another page at <a href="detailsToDB.html"> CLICKING THIS</a>
+    <div class="slides">
+        <div class="slide" id="slide1">
+            <img src="test-img-one.jpg" alt="img1">
+        </div>
+        <div class="slide" id="slide2">
+            <img src="test-img-two.jpg" alt="img2">
+        </div>
+        <div class="slide" id="slide3">
+            <img src="test-img-three.jpg" alt="img3">
+        </div>
+        <div class="slide" id="slide4">
+            <img src="test-img-four.jpg" alt="img4">
+        </div>
     </div>
 </body>
 </html>
