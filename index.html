@@ -20,23 +20,24 @@
                 $('body').toggleClass('active');
             });
 
-            function reLoad(){
-                setTimeout(()=>{
-                    $("#slide1").slideUp("slow");
-                    setTimeout(()=>{
-                        $("#slide2").slideUp("slow");
-                        setTimeout(()=>{
-                            $("#slide3").slideUp("slow");
-                            setTimeout(()=>{
-                                $("#slide4").slideUp("slow");
-                            },2000);
-                        },2000);
-                    },2000);
-                },2000);
+
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("slide");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
             }
-            reLoad();
         });
     </script>
+
 </head>
 <body>
     <div class="coll-title">
@@ -53,27 +54,31 @@
     <div class="nav">
         <div class="nav-computer">
             <ol>
-                <li>Home</li>
-                <li>About</li>
-                <li>Courses</li>
-                <li>Teachers</li>
-                <li>Contact Us</li>
+                <!-- for COMPUTERS ONLY -->
+                <li><a href="/////">Home</a></li>
+                <li><a href="/////">About</a></li>
+                <li><a href="/////">Courses</a></li>
+                <li><a href="/////">Teachers</a></li>
+                <li><a href="/////">Notes</a></li>
+                <li><a href="/////">Contact Us</a></li>
             </ol>
         </div>
-        <div class="nav-mobile">
+        <div class="nav-mobile  sticky-bar">
+            <!-- for mobile phones - image-->
             <img src="menuBar-mobiles.png" alt="Menu" id="menu-bar-img">
         </div>
         <div class="disp-on-click">
             <ol>
-                <li>Home</li>
-                <li>About</li>
-                <li>Courses</li>
-                <li>Teachers</li>
-                <li>Contact Us</li>
+                <!-- for mobile phones - options to be seen when clicked-->
+                <li><a href="/////">Home</a></li>
+                <li><a href="/////">About</a></li>
+                <li><a href="/////">Courses</a></li>
+                <li><a href="/////">Teachers</a></li>
+                <li><a href="/////">Contact Us</a></li>
             </ol>
         </div>
     </div>
-    <div class="slides">
+    <!-- <div class="slides">
         <div class="slide" id="slide1">
             <img src="test-img-one.jpg" alt="img1">
         </div>
@@ -86,6 +91,45 @@
         <div class="slide" id="slide4">
             <img src="test-img-four.jpg" alt="img4">
         </div>
+    </div>
+    <div class="search-student-div">
+        wdfguywgefoigqwlief
+        <div class="search-outline">
+            <div class="search-area"></div>
+            <div class="search-image"></div>
+        </div>
+    </div> -->
+    <div class="main-block">
+        <div class="slides">
+            <div class="slide" id="slide1">
+                <img src="test-img-one.jpg" alt="img1">
+            </div>
+            <div class="slide" id="slide2">
+                <img src="test-img-two.jpg" alt="img2">
+            </div>
+            <div class="slide" id="slide3">
+                <img src="test-img-three.jpg" alt="img3">
+            </div>
+            <div class="slide" id="slide4">
+                <img src="test-img-four.jpg" alt="img4">
+            </div>
+        </div>
+
+        <form action="" method="POST" class="id-search"> 
+            <!-- id entered must go to G-Sheets and fetch the data from the sheets; so set action="" to the newly deployed appscript -->
+            <div class="search-student-div">
+                <div class="search-outline">
+                    <div class="search-area">
+                        <input type="text" placeholder="   Search student record with ID:   " name="studentID" id="ID-input-area" autofocus>
+                    </div>
+                    <div class="search-image">
+                        <button type="submit">
+                            <img src="search-magnifying-Glass.jpg" alt="Find!">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 </html>
